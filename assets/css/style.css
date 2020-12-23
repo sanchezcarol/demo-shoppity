@@ -394,6 +394,51 @@ p {
   top: -5px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 5px 12px;
+  }
+  .navbar-nav .nav-item {
+    margin: 0;
+  }
+  .navbar-nav .nav-item a {
+    display: block;
+    padding: 4px 0;
+  }
+  .navbar-nav .nav-item:hover .sub-menu {
+    top: 0;
+  }
+  .navbar-nav .nav-item .sub-menu {
+    position: relative;
+    width: 100%;
+    top: 0;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar-nav .sub-nav-toggler {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    color: #222;
+    font-size: 18px;
+    border: 0;
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /*===== HEADER HERO =====*/
 
 .header-hero {
@@ -404,14 +449,14 @@ p {
 }
 
 .header-hero .shape {
-  position: absolute;
+  position:absolute;
 }
 
 .header-hero .shape.shape-1 {
   width: 60px;
   height: 30px;
-  left: 90%;
-  top: 30%;
+  right:calc(50% - 620px);
+  top: calc(50% - 150px);
   -webkit-animation: animation1 2s linear infinite;
   -moz-animation: animation1 2s linear infinite;
   -o-animation: animation1 2s linear infinite;
@@ -421,8 +466,8 @@ p {
 .header-hero .shape.shape-2 {
   width: 50px;
   height: 30px;
-  left: 90%;
-  top: 60%;
+  right:calc(50% - 620px);
+  top: calc(50% + 120px);
   -webkit-animation: animation1 2s linear infinite;
   -moz-animation: animation1 2s linear infinite;
   -o-animation: animation1 2s linear infinite;
@@ -432,8 +477,8 @@ p {
 .header-hero .shape.shape-3 {
   width: 60px;
   height: 30px;
-  left: 55%;
-  top: 40%;
+  right: calc(50% - 180px);
+  top: 50%;
   -webkit-animation: animation1 2s linear infinite;
   -moz-animation: animation1 2s linear infinite;
   -o-animation: animation1 2s linear infinite;
@@ -441,9 +486,9 @@ p {
 }
 
 .header-hero .shape.shape-4 {
-  width: 50px;
-  height: 30px;
-  left: 55%;
+  width: 60px;
+  height: 40px;
+  right: calc(50% - 120px);
   top: 70%;
   -webkit-animation: animation1 2s linear infinite;
   -moz-animation: animation1 2s linear infinite;
@@ -452,34 +497,25 @@ p {
 }
 
 .header-hero .shape.shape-5 {
-  width: 19px;
-  height: 19px;
-  background-color: rgba(108, 99, 255, 0.55);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 20%;
-  border-radius: 50%;
+  width: 50px;
+  height: 30px;
+  right: calc(50% - 120px);
+  top: 30%;
   -webkit-animation: animation1 2s linear infinite;
   -moz-animation: animation1 2s linear infinite;
   -o-animation: animation1 2s linear infinite;
-  animation: animation1 2s linear infinite;
+  animation: animation1 2s linear infinite
 }
 
 .header-hero .shape.shape-6 {
-  width: 14px;
-  height: 14px;
-  background-color: rgba(235, 163, 26, 0.55);
-  border-radius: 50%;
-  left: 45%;
-  bottom: 70px;
+  width: 50px;
+  height: 30px;
+  right:calc(50% - 560px);
+  top: calc(50% - 25px);
   -webkit-animation: animation1 2s linear infinite;
   -moz-animation: animation1 2s linear infinite;
   -o-animation: animation1 2s linear infinite;
-  animation: animation1 2s linear infinite;
+  animation: animation1 2s linear infinite
 }
 
 .header-shape-1 {
@@ -529,7 +565,7 @@ p {
 
 .header-hero-content .text {
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 17px;
   color: #fff;
 }
 
@@ -586,21 +622,8 @@ p {
 }
 
 .header-image .image {
-  width: 70%;
+  width: 80%;
 }
-
-.header-image .image-shape {
-  position: absolute;
-  bottom: -100px;
-  left: -115px;
-  z-index: -1;
-}
-
-.header-image .image-shape img {
-  max-width: 350px;
-}
-
-
 
 @keyframes video {
   0% {
@@ -833,7 +856,7 @@ Feature 1
   background: #000;
   height: 2px;
   width: 50px;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 
@@ -907,8 +930,9 @@ Feature 1
 .support .text-support {
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 32px;
+  text-align: justify;
   /* or 145% */
   mix-blend-mode: normal;
   color: #000000;
@@ -1116,6 +1140,12 @@ mix-blend-mode: normal;
   .navbar-nav .nav-item {
     margin-left: 30px;
   }
+  .header-hero .shape.shape-1 {
+    right:calc(50% - 500px);
+  }
+  .header-hero .shape.shape-2 {
+    right:calc(50% - 500px);
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1240,8 +1270,11 @@ mix-blend-mode: normal;
 
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .shape {
-    display: none;
+  .header-image .image-shape {
+    position: fixed;
+    bottom: -100px;
+    left: -115px;
+    z-index: -1;
   }
   .header-image .image {
     width: 80%
@@ -1407,7 +1440,7 @@ mix-blend-mode: normal;
 }
 
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
 
   .header-image .image {
     width: 100%
@@ -1417,7 +1450,7 @@ mix-blend-mode: normal;
   }
 } 
 
-@media only screen and (max-width: 310px) {
+@media only screen and (max-width: 320px) {
 
   .header-image .image {
     width: 80%
